@@ -1,0 +1,73 @@
+.top {
+    border: 1px solid rgb(188, 188, 188);
+    border-radius: 10px;
+    margin: 35px 20px;
+    height: 181px;
+}
+
+.top h2 {
+    margin: 10px;
+    padding: 10px;
+}
+
+.top h3 {
+    margin: 10px;
+    padding: 10px;
+}
+
+.searchbox {
+    margin: 10px;
+    padding: 10px;
+    
+}
+
+.searchbox input {
+    width: 1155px;
+    height: 26px;
+    border-radius: 9px;
+    border: 1px solid rgb(188, 188, 188);
+}
+.bottom{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.left{
+    width: 550px;
+    border: 1px solid rgb(188, 188, 188);
+    height: 270px;
+    border-radius: 10px;
+    
+}
+.left h1{
+    margin: 10px;
+}
+.right{
+    width: 550px;
+    border: 1px solid rgb(188, 188, 188);
+    height: 270px;
+    border-radius: 10px;
+}
+.right h1{
+    margin: 10px;
+}
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 20px;
+    margin: 20px;
+}
+.not{
+    height: 35px;
+    width: 118px;
+}
+.styled{
+    height: 35px;
+    width: 118px;
+    background: linear-gradient(to right, #5000c0, #c36cc7);
+    color: white;
+    
+}

@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-family: "Roboto", sans-serif;
+    overflow: hidden;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.right {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.right img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.left {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.tagline {
+    position: relative;
+    top: 50px;
+    left: 100px;
+    width: 400px;
+    font-size: xx-large;
+    font-weight: 800;
+}
+
+.second {
+    position: relative;
+    left: 60px;
+    color: #8a3cf7;
+}
+
+.combo {
+    position: relative;
+    top: 75px;
+    left: 100px;
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+    align-items: center;
+    width: 600px;
+}
+
+.combo button {
+    height: 60px;
+    width: 125px;
+    font-size: medium;
+    color: white;
+    background: linear-gradient(to right, #5000c0, #c36cc7);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 2s ease-in-out 0.2s;
+}
+
+.combo button:hover {
+    background-color: #5000c0;
+    transform: scale(1.03);
+}

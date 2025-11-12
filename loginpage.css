@@ -1,0 +1,149 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    background-color: #eeeeee;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 100 900;
+  font-stretch: 100%;
+  src: url(https://fonts.gstatic.com/s/roboto/v49/KFO5CnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmkAnkaWzU.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+.container {
+  width: 470.1px;
+  height: 499.6px;
+  border: 2px solid #dedddb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 102px auto;
+  background-color: white;
+  padding-top: 20px; 
+}
+
+.clogo {
+  max-width: 200px;
+  margin-bottom: 20px;
+}
+
+.text1 {
+  font-size: 20.1px;
+  color: black;
+  background: none;
+  font-weight: bolder;
+  padding-bottom: 20px;
+}
+
+.text2 {
+  font-size: 15px;
+  color: black;
+  background: none;
+}
+
+.text3 {
+  font-size: 30.1px;
+  color: black;
+  background: none;
+  padding-top: 54.1px;
+}
+
+.email {
+  font-size: 12px;
+  color: black;
+  background: none;
+  padding-top: 12.3px;
+  padding-right: 418px;
+}
+
+.emailbox {
+  font-size: 12px;
+  color: black;
+  background: white;
+  width: 446.9px;
+  height: 28px;
+  border: 1px solid black;
+  border-radius: 5px;
+  outline: none;
+}
+
+.emailbox::placeholder{
+  color: #b4b4b4;
+  padding-left: 17.2px;
+}
+
+.emailbox::focus{
+  border: 1px solid #5000c0;
+}
+
+.emailbox:focus::placeholder {
+  color: transparent;
+}
+
+.password {
+  font-size: 12px;
+  color: black;
+  background: none;
+  padding-top: 12px;
+  padding-right: 403px;
+}
+
+.passwordbox {
+  font-size: 12px;
+  color: black;
+  background: white;
+  width: 446.9px;
+  height: 28px;
+  border: 1px solid black;
+  border-radius: 5px;
+  outline: none;
+}
+
+.passwordbox::placeholder{
+  color: #b4b4b4;
+  padding-left: 17.2px;
+}
+
+.passwordbox::focus{
+  border: 1px solid #5000c0;
+}
+
+.passwordbox:focus::placeholder {
+  color: transparent;
+}
+
+.loginbox {
+  font-size: 23.1px;
+  background-image: linear-gradient(to right, #5000c0, #c36cc7);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 446.9px;
+  height: 49.3px;
+  border: 1px solid white;
+  border-radius: 5px;
+  margin-top: 25px;
+  cursor: pointer;
+  transition: background 0.4s;
+}
+
+.loginbox:hover{
+  background-image: linear-gradient(to right, #c36cc7, #5000c0);;
+}
+
+.signup {
+  font-size: 14px;
+  color: black;
+  background: none;
+  padding-top: 54.1px;
+}
+
+a{
+  font-size: 14px;
+  background: none;
+}

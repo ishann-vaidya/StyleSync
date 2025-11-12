@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Harmony</title>
+    <link rel="stylesheet" href="sidebar.css">
+    <script defer src="dropdown.js"></script>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            /* font-family: 'Roboto', sans-serif; */
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            font-style: italic;
+            font-weight: 100 900;
+            font-stretch: 100%;
+            src: url(https://fonts.gstatic.com/s/roboto/v49/KFO5CnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmkAnkaWzU.woff2) format('woff2');
+            unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+
+        .layout {
+            display: flex;
+            height: calc(100% - 45.4px);
+            width: 100%;
+        }
+
+        .sidebar {
+            flex-shrink: 0;
+            width: 266px;
+            height: 100%;
+            border-right: 2px solid #e2e2e2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .main {
+            flex: 1;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-content {
+            flex: 1;
+            overflow: hidden;
+            padding: 10px 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .analysis {
+            flex-shrink: 0;
+            border: 1px solid #b4b4b4;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-height: 300px;
+        }
+
+        .analysis-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .ch {
+            width: 55px;
+            height: 55px;
+        }
+
+        .analysis-text .title {
+            font-size: 22px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .text1 {
+            font-size: 14px;
+            color: #737373;
+        }
+
+        .color-analysis {
+            display: flex;
+        }
+
+        .color-combinations {
+            display: flex;
+            gap: 790px;
+        }
+
+        .color-block {
+            text-align: center;
+        }
+
+        .block-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .color-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 5px;
+        }
+
+        .color-square {
+            width: 55px;
+            height: 55px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        .hex {
+            font-size: 13px;
+            color: #737373;
+        }
+
+        .tag {
+            border: 1px solid #b4b4b4;
+            border-radius: 8px;
+            padding: 4px 10px;
+            background: #f7f7f7;
+            font-size: 12px;
+            margin-top: 5px;
+            cursor: default;
+        }
+
+        .palette-section {
+            border: 1px solid #b4b4b4;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 15px;
+            flex-grow: 1;
+            overflow: hidden;
+        }
+
+        .palette-title {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .subtitle {
+            color: #737373;
+            margin-bottom: 10px;
+        }
+
+        .palette-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .palette-card {
+            border: 1px solid #b4b4b4;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .palette-card .color-row div {
+            width: 50px;
+            height: 30px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topbar">
+        <img src="StyleSync.jpg" alt="StyleSync logo" class="logo">
+        <div class="nav-right">
+            <a href="#" class="nav-link">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Support ▾</button>
+                <div class="dropdown-content">
+                    <a href="landing_page.html">Go to home page</a>
+                    <a href="loginpage.html">Log in</a>
+                    <a href="help.html">Help</a>
+                </div>
+            </div>
+            <div class="user-icon">
+                <img src="/images/user.png" alt="User " class="user-img">
+            </div>
+        </div>
+    </div>
+
+    <div class="layout">
+        <div class="sidebar">
+            <h1>Style Menu</h1>
+            <a href="mywardrobe.html" class="b1">
+                <img src="/images/wardrobe.png" alt="logo" class="btn-icon">
+                <div class="btn-text">
+                    <div class="btn-title">My Wardrobe</div>
+                    <div class="btn-subtitle">View your flipbooks</div>
+                </div>
+            </a>
+
+            <a href="createflipbook.html" class="b1">
+                <img src="/images/create.png" alt="logo" class="btn-icon">
+                <div class="btn-text">
+                    <div class="btn-title">Create a Flipbook</div>
+                    <div class="btn-subtitle">Upload new clothes</div>
+                </div>
+            </a>
+
+            <a href="favorites.html" class="b1">
+                <img src="/images/favorites.png" alt="logo" class="btn-icon">
+                <div class="btn-text">
+                    <div class="btn-title">Favorites</div>
+                    <div class="btn-subtitle">Saved outfits</div>
+                </div>
+            </a>
+
+            <a href="colorharmony.html" class="b1">
+                <img src="/images/ch.png" alt="logo" class="btn-icon">
+                <div class="btn-text">
+                    <div class="btn-title">Color Harmony</div>
+                    <div class="btn-subtitle">Perfect combinations</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="main">
+            <div class="main-content">
+                <h1>Color Harmony</h1>
+                <p style="color: #b4b4b4;">Discover perfect combinations</p>
+
+                <div class="analysis">
+                    <div class="analysis-header">
+                        <img src="/images/ch.png" alt="logo" class="ch">
+                        <div class="analysis-text">
+                            <p class="title">Color Analysis</p>
+                            <div class="text1">Pick a color from your wardrobe to discover perfect combinations</div>
+                        </div>
+                    </div>
+
+                    <div class="color-analysis">
+                        <div class="color-block">
+                            <p class="block-title">Selected Color</p>
+                            <div class="color-row">
+                                <div class="color-square" style="background-color: #ffa100;"></div>
+                            </div>
+                            <p class="hex">#ffa100</p>
+                        </div>
+                    </div>
+
+                    <div class="color-combinations">
+                        <div class="color-block">
+                            <p class="block-title">Complementary</p>
+                            <div class="color-row">
+                                <div class="color-square" style="background-color: #ffa100;"></div>
+                                <div class="color-square" style="background-color: #004bff;"></div>
+                            </div>
+                            <button class="tag">Perfect contrast</button>
+                        </div>
+
+                        <div class="color-block">
+                            <p class="block-title">Analogous</p>
+                            <div class="color-row">
+                                <div class="color-square" style="background-color: #ff9a00;"></div>
+                                <div class="color-square" style="background-color: #ffe2b3;"></div>
+                            </div>
+                            <button class="tag">Harmonious</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="palette-section">
+                    <p class="palette-title">Fashion color palettes</p>
+                    <p class="subtitle">Curated color combinations that work perfectly together</p>
+
+                    <div class="palette-grid">
+                        <div class="palette-card">
+                            <div class="color-row">
+                                <div style="background-color:#000;"></div>
+                                <div style="background-color:#f4f5f4;"></div>
+                                <div style="background-color:#808080;"></div>
+                                <div style="background-color:#bfbfbf;"></div>
+                            </div>
+                            <p>Classic Monochrome</p>
+                        </div>
+
+                        <div class="palette-card">
+                            <div class="color-row">
+                                <div style="background-color:#ff0000;"></div>
+                                <div style="background-color:#ff6600;"></div>
+                                <div style="background-color:#ffb300;"></div>
+                                <div style="background-color:#ffe100;"></div>
+                            </div>
+                            <p>Sunset Warm</p>
+                        </div>
+
+                        <div class="palette-card">
+                            <div class="color-row">
+                                <div style="background-color:#002d62;"></div>
+                                <div style="background-color:#003cb3;"></div>
+                                <div style="background-color:#6c7cff;"></div>
+                                <div style="background-color:#56c7ff;"></div>
+                            </div>
+                            <p>Ocean Breeze</p>
+                        </div>
+
+                        <div class="palette-card">
+                            <div class="color-row">
+                                <div style="background-color:#00994d;"></div>
+                                <div style="background-color:#00cc66;"></div>
+                                <div style="background-color:#66ff66;"></div>
+                                <div style="background-color:#b3ffb3;"></div>
+                            </div>
+                            <p>Garden Fresh</p>
+                        </div>
+
+                        <div class="palette-card">
+                            <div class="color-row">
+                                <div style="background-color:#800080;"></div>
+                                <div style="background-color:#9900ff;"></div>
+                                <div style="background-color:#cc00ff;"></div>
+                                <div style="background-color:#e5aaff;"></div>
+                            </div>
+                            <p>Royal Purple</p>
+                        </div>
+
+                        <div class="palette-card">
+                            <div class="color-row">
+                                <div style="background-color:#663300;"></div>
+                                <div style="background-color:#994d00;"></div>
+                                <div style="background-color:#ff6600;"></div>
+                                <div style="background-color:#e6b98c;"></div>
+                            </div>
+                            <p>Earthy Tones</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
